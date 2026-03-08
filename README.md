@@ -1,61 +1,84 @@
-# Dash Data Systems Mastery 🚀
+# Dash Data Systems Mastery 📊🚀
 
-A beginner-friendly project demonstrating how to build interactive web applications using **Dash** (by Plotly) with Python.
+A hands-on learning repository focused on building **interactive data applications** using **Dash, Plotly, and Pandas**.
+This project documents my journey toward mastering **data visualization systems and dashboard development in Python**.
 
-This repository is part of my journey to mastering:
-
-* Dash
-* Plotly
-* Pandas
-* Data visualization systems
-* Production-ready Python app structure
+The repository begins with simple Dash applications and gradually evolves toward **structured, production-style dashboards** with clear explanations and clean code practices.
 
 ---
 
-## 📂 Project Structure
+# 🎯 Project Goal
+
+The goal of this repository is to learn and practice:
+
+* Building **interactive dashboards using Dash**
+* Creating **visualizations using Plotly Express**
+* Processing and structuring data using **Pandas**
+* Designing **responsive layouts for dashboards**
+* Writing **clean, well-documented Python code**
+
+This repository serves as both a **learning log and a growing dashboard project**.
+
+---
+
+# 🧰 Technologies Used
+
+* **Python**
+* **Dash**
+* **Plotly Express**
+* **Pandas**
+
+These tools are commonly used in **data engineering, analytics, and dashboard development**.
+
+---
+
+# 📊 Current Features
+
+The current application demonstrates:
+
+* Creating a **Dash web application**
+* Using **Pandas DataFrames** to store data
+* Generating visualizations using **Plotly Express**
+* Displaying charts using **Dash Graph components**
+* Building a **side-by-side layout for charts**
+
+The dashboard currently includes:
+
+* 📊 **Bar Chart** – displays quantity distribution
+* 🥧 **Pie Chart** – shows proportional distribution
+
+Both charts are displayed **side by side using styled Dash components**.
+
+---
+
+# 📂 Project Structure
 
 ```
 Dash-Data-Systems-Mastery/
-│── Print_Hello.py
-│── requirements.txt
-│── .gitignore
-│── README.md
-│── venv/
+│
+├── Print_Hello.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+└── venv/ (ignored in production)
 ```
 
 ---
 
-## 🧠 Project Description
-
-This initial version contains a simple Dash application that displays:
-
-```
-Hello
-```
-
-It serves as a foundational setup to:
-
-* Understand Dash app structure
-* Learn layout creation using `html.Div`
-* Run a local development server
-* Prepare for advanced dashboard development
-
----
-
-## ⚙️ Installation
+# ⚙️ Installation
 
 ### 1️⃣ Clone the Repository
 
-```bash
+```
 git clone https://github.com/Ahtesham-Latif/Dash-Data-Systems-Mastery.git
 cd Dash-Data-Systems-Mastery
 ```
 
 ---
 
-### 2️⃣ Create Virtual Environment (Recommended)
+### 2️⃣ Create a Virtual Environment (Recommended)
 
-```bash
+```
 python -m venv venv
 ```
 
@@ -63,13 +86,13 @@ Activate it:
 
 **Windows**
 
-```bash
+```
 venv\Scripts\activate
 ```
 
-**Mac/Linux**
+**Mac / Linux**
 
-```bash
+```
 source venv/bin/activate
 ```
 
@@ -77,68 +100,63 @@ source venv/bin/activate
 
 ### 3️⃣ Install Dependencies
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
 ---
 
-## ▶️ Running the App
+# ▶ Running the Application
 
-```bash
+Run the Dash app using:
+
+```
 python Print_Hello.py
 ```
 
-Then open your browser and go to:
+Then open your browser and visit:
 
 ```
 http://127.0.0.1:8050/
 ```
 
----
-
-## 📦 Requirements
-
-Main dependency:
-
-* dash
-
-(See `requirements.txt` for full list)
+The dashboard will load with the **bar chart and pie chart displayed side by side**.
 
 ---
 
-## 🎯 Goals of This Repository
+# 🧠 Learning Focus
 
-This repository will gradually expand to include:
+This project focuses on understanding:
 
-* Interactive dashboards
-* Data filtering
-* Pandas data processing
-* Plotly visualizations
-* Responsive layouts using Flexbox
-* Multi-page Dash applications
-* Deployment strategies
+* Dash application structure
+* Plotly chart creation
+* Data visualization workflows
+* Layout structuring using HTML components in Dash
+* Writing readable and well-commented Python code
 
 ---
 
-## 📈 Future Improvements
+# 📈 Planned Improvements
 
-* Add charts using Plotly Express
-* Connect to real datasets
-* Implement callbacks
-* Add responsive layout designs
-* Deploy to cloud platform
+Future updates will include:
+
+* Interactive **Dash callbacks**
+* **User input controls** (dropdowns, sliders, filters)
+* **Responsive layouts using Flexbox**
+* **Multiple dashboard pages**
+* **Real dataset integration**
+* **Improved styling using CSS**
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 **Ahtesham Latif**
 
-Learning and building scalable data systems using Python & Dash.
+Exploring **data systems, visualization engineering, and interactive dashboards using Python**.
 
 ---
 
-## ⭐ If You Like This Project
+# ⭐ Support
 
-Feel free to star the repository and follow the journey!
+If you find this repository helpful, consider **starring the project** to follow future improvements.
