@@ -20,15 +20,18 @@ Bar_Chart = px.bar(df, x = "Fruits" , y="Amount" , title="Bar_Chart" ,color="Fru
 Pie_Chart = px.pie(df, names="Fruits" , values= "Amount" , title="Pie_Chart", color="Fruits", color_discrete_sequence = ["Red","Yellow","Black","Purple"])
 # Create a beautiful layout
 app.layout=html.Div([
-    html.H1("Time to present charts side by side "),  
+    html.H1("Time to present charts side by side " ,style={"textAlign" : "center", "color": "Maroon" , "font-family": "Arial"}),  
     # 2 Child divs for 2 graphs and styling them to be inline and take 50% of the width each (so they can be side by side) 
     # id is used to style the graph when usinng external css  also to link the graph with callback functions when we want to make it interactive
     #  and figure is used to pass the graph object we created above (Bar_Chart and Pie_Chart)
     html.Div([dcc.Graph(id="bar_chart",
               figure=Bar_Chart)], style= {"display" : "inline-block" , "width" : "50%"}),
     html.Div([dcc.Graph(id="Pie_chart",
-              figure=Pie_Chart)],style= {"display" : "inline-block" , "width" : "50%"} )                  
-])
+              figure=Pie_Chart)],style= {"display" : "inline-block" , "width" : "50%"} )               
+]
+# Styling the main div to center the content
+#style={"textAlign" : "center", "color": "DarkBlue" , "font-family": "Arial"}
+)
 # Run App(debug mode)
 if __name__ == "__main__":
   app.run(debug=True)
