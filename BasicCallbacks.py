@@ -31,6 +31,7 @@ app = dash.Dash(__name__)
 app.layout = html.Div([
     html.H1("Time to learn about callbacks",
             style={"textAlign" : "center", "color": "DarkBlue" , "font-family": "Arial"}),
+# Adding a line break for better spacing between the heading and the next section of the app
     html.Br(),
     html.H2("Enter your Profession to get students in that profession instead of getting percentage in the pie chart ", 
             style={"textAlign" : "center", "color": "Green" , "font-family": "Arial"}),
@@ -46,6 +47,8 @@ app.layout = html.Div([
             type="text")
 ]),
     html.Br(),
+    # Output div to display the output of the callback function based on the user input in the input box
+    # and styling it to be visually appealing and consistent with the theme of the app
     html.Div(id="Output" , style={"textAlign" : "center", "color": "DarkBlue" , "font-family": "Arial" ,"bold": "True"}),
     html.Br(),
     html.Br(),
@@ -55,12 +58,23 @@ app.layout = html.Div([
             style={"textAlign" : "center", "color": "Maroon" , "font-family": "Arial"}),
     dcc.Graph(id="Bar_Chart", figure=Bar_Chart ,style={"width": "100%", "display": "inline-block"})
 ]) 
+# Callback function to update the output div based on the user input in the input box and to make the app interactive
 @callback(
+    # Output component to update the output div with the total students in the profession
     Output(component_id="Output", component_property="children"),
+    # Input component to get the user input from the input box
+    # component_id is the id of the input box and 
+    # component_property is the property of the input box that 
+    # we want to use in our callback function (in this case we want to use the value property of the input box to get the user input)
     Input(component_id="Input", component_property="value")
 )
+# Function to update the output div with the total students in the profession based on the user input in the input box
+# input_value is the user input from the input box
 def update_output_div(input_value):
+    # Using pandas to filter the dataframe based on the user input and get the total students in that profession using sum function
     total_students = df1[df1["Profession"] == input_value]["Quantity"].sum()
+    # Returning the total students in the profession as a string to be displayed in the output div
+    # We are using an f-string to format the output string and make it more readable and informative for the user
     return f'Total students in {input_value} profession is {total_students}'
 if __name__ == "__main__":
     app.run(debug=True)
